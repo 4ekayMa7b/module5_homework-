@@ -1,4 +1,13 @@
-var max = 100;
-var min = 1;
+let start = 5;
+let end = 10;
 
-console.log(Math.floor(Math.random() * (max - min) + min))
+const count = function func(a, b) {
+    console.log(start)
+    start = start + 1
+}
+
+const intervalId = setInterval(count, 1000, start, end)
+
+setTimeout(function(){
+    clearInterval(intervalId)
+}, (end - start)*1000 + 2000)

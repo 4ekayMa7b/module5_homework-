@@ -1,8 +1,8 @@
-var obj = [1, 3, 65, 'gtg', 'ds']
-
-console.log(obj.length)
-
-for (var i = 0; i < obj.length; i = i + 1) {
-    console.log(obj[i])
+const sq = (x, n) => {
+    for (let i = 1; i < n; i = i + 1) {
+        x = x * x
+    }
+    return x
 }
 
+console.log(sq("4", 2))

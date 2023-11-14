@@ -1,9 +1,13 @@
-var x = "12"
-
-if (x === +x) console.log("It's number!")
-if (x !== +x) {
-    if (+x == 1 || +x == 0) {
-        console.log("It's boolean!")
+function func(a) {
+    let valid = (a <= 1000 && a !== 0) ? true : false;
+    switch (valid) {
+        case true:
+            for (let i = 2; i <= Math.ceil(Math.sqrt(a)); i = i + 1) {
+                if (a % i === 0) return "bad";
+                }
+            return "good"
+        case false: 
+            return "Invalid"
     }
-    else console.log("It's string!")
 }
+console.log(func(10))
